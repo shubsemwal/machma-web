@@ -65,7 +65,8 @@
   bottom:0;
   width:100%;
   height:380px;
-  background:#220a0a;
+  background:var(--inv-red);
+  border: rgb(203, 196, 196) 1px solid ;
   border-radius:8px;
   cursor:pointer;
 

@@ -32,7 +32,7 @@ const Footer = () => {
             <span className="organiser-label">Organised By</span>
             <div className="organiser-name">
               <span className="org-icon">🏢</span>
-              Udan Media &amp; Communications Pvt. Ltd.
+              Fortune Exhibitor &amp; Pvt. Ltd.
             </div>
           </div>
 
@@ -91,9 +91,9 @@ const Footer = () => {
             <div className="contact-item">
               <span className="contact-icon">📞</span>
               <div>
-                <a href="tel:+919592048025" className="contact-phone">+91-95920 48025</a>
+                <a href="tel:+919592048025" className="contact-phone">+91-00000-00000</a>
                 <span className="contact-sep"> / </span>
-                <a href="tel:+919876103835" className="contact-phone">+91-98761 03835</a>
+                <a href="tel:+919876103835" className="contact-phone">+91-00000-00000</a>
               </div>
             </div>
 
@@ -107,8 +107,8 @@ const Footer = () => {
             <div className="contact-item">
               <span className="contact-icon">📍</span>
               <address className="contact-address">
-                Ludhiana Exhibition Centre,<br />
-                G.T. Road, Sahnewal,<br />
+                1201, Phase 1 Rd, Phase 1<br />
+                Urban Estate Dugri, 141013<br />
                 Ludhiana (Punjab)
               </address>
             </div>
@@ -124,7 +124,7 @@ const Footer = () => {
       {/* ── Bottom bar ── */}
       <div className="footer-bottom">
         <span className="bottom-copy">
-          © 2026 Udan Media &amp; Communications Pvt. Ltd. All rights reserved.
+          © 2026 Fortune Exhibitor &amp; Pvt. Ltd. All rights reserved.
         </span>
         <span className="bottom-credit">
           Created by <a href="#" className="credit-link">Growess Group</a>

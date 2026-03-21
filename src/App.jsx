@@ -1,4 +1,5 @@
 import './App.css'
+import ExpoSection from './components/ExpoSection'
 import Footer from './components/Footer'
 import MachmaAbout from './components/MachmaAbout'
 import MachmaHero from './components/MachmaHero'
@@ -15,9 +16,10 @@ function App() {
     <MachmaAbout />
     <MachmaReport />
     <MachmaWhyJoin />
-    <MachmaInvitation />
     <MachmaVisitorProfile />
     <MachmaSponsors />
+    <ExpoSection />
+    <MachmaInvitation />
     <Footer />
     </>
   )

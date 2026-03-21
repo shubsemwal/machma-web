@@ -9,10 +9,11 @@ const stats = [
 
 const navLinks = [
   { label: "HOME", href: "#" },
-  { label: "ABOUT", href: "#", hasDropdown: true },
-  { label: "FOCUSED_SECTORS", href: "#" },
-  { label: "EXHIBITORS", href: "#", hasDropdown: true },
-  { label: "DOWNLOADS", href: "#", hasDropdown: true },
+  { label: "ABOUT US", href: "#", hasDropdown: false },
+  { label: "FOCUSE US", href: "#" },
+  { label: "PROMOTION", href: "#", hasDropdown: false },
+  { label: "GALLERY", href: "#", hasDropdown: false },
+  { label: "DOWNLOADS", href: "#", hasDropdown: false },
 ];
 
 /**

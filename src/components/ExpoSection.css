@@ -125,9 +125,9 @@
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(230, 184, 74, 0.1);
-  border: 1px solid rgba(230, 184, 74, 0.3);
+  color: #f3ecda;
+  background: rgb(13 12 12 / 10%);
+  border: 1px solid rgb(255 194 194 / 30%);
   padding: 5px 14px;
   border-radius: 2px;
   margin-bottom: 20px;
@@ -314,7 +314,7 @@
 .visitors-btn {
   background: linear-gradient(135deg, var(--red-dark), #aa0e03);
   color: var(--white);
-  box-shadow: 0 6px 24px rgba(230, 184, 74, 0.35);
+  box-shadow: 0 6px 0px 20px rgb(16 16 17 / 35%);;
 }
 
 .visitors-btn:hover {
@@ -342,7 +342,7 @@
     to bottom,
     transparent 0%,
     rgba(192, 57, 43, 0.6) 30%,
-    rgba(230, 184, 74, 0.6) 70%,
+    rgba(217, 8, 8, 0.6) 70%,
     transparent 100%
   );
   position: relative;
@@ -363,7 +363,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold);
+  color: var(--red-bright);
   animation: spin-slow 12s linear infinite;
   box-shadow: 0 0 20px rgba(192, 57, 43, 0.3);
 }
