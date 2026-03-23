@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import About from "./MachmaAbout";
 import "./MachmaHero.css";
 
 const stats = [
@@ -8,8 +10,8 @@ const stats = [
 ];
 
 const navLinks = [
-  { label: "HOME", href: "#" },
-  { label: "ABOUT US", href: "#", hasDropdown: false },
+  { label: "HOME", href: "/" },
+  { label: "ABOUT US", href: "/about", hasDropdown: false },
   { label: "FOCUSE US", href: "#" },
   { label: "PROMOTION", href: "#", hasDropdown: false },
   { label: "GALLERY", href: "#", hasDropdown: false },
@@ -65,62 +67,7 @@ export default function MachmaHero({
     : {};
 
   return (
-    <section className="machma-wrapper">
-      {/* ── NAVBAR ── */}
-      <nav className="machma-nav">
-        <a href="#" className="machma-logo-wrap">
-          {logoImage ? (
-            /* LOGO IMAGE */
-            <img
-              src={logoImage}
-              alt="MACHMA Expo 2026"
-              className="machma-logo-img"
-            />
-          ) : (
-            /* TEXT LOGO FALLBACK */
-            <div className="machma-logo">
-              <span className="logo-edition">13th</span>
-              <span className="logo-main">MACHMA</span>
-              <span className="logo-sub">EXPO‑2026</span>
-            </div>
-          )}
-        </a>
-
-        <button
-          className="machma-hamburger"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
-        <ul className={`machma-nav-links ${menuOpen ? "open" : ""}`}>
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a href={link.href}>
-                {link.label}
-                {link.hasDropdown && (
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                    <path
-                      d="M1 1l4 4 4-4"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                )}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <a href="#" className="machma-book-btn">
-          BOOK NOW
-        </a>
-      </nav>
-
+    <section className="machma-hero-section">
       {/* ── HERO ── */}
       <div className="machma-hero" ref={heroRef} style={heroBgStyle}>
         {/* Red stripe bars */}

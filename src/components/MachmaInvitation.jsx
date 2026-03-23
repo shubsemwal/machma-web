@@ -132,8 +132,8 @@ export default function MachmaInvitation() {
 
             {/* Envelope face label (closed state) */}
             <div className={`inv-env-label ${opened ? "inv-env-label--hide" : ""}`}>
-              <span className="inv-env-text">You're Invited</span>
-              <span className="inv-env-sub">Click to open ↑</span>
+              {/* <span className="inv-env-text">You're Invited</span> */}
+              {/* <span className="inv-env-sub">Click to open ↑</span> */}
             </div>
           </div>
 

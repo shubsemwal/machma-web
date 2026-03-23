@@ -4,12 +4,12 @@ import "./MachmaSponsors.css";
 const poweredBy = {
   name: "ALMTI",
   label: "Association of Ludhiana Machine Tool Industries",
-  src:"https://images.unsplash.com/photo-1613206485381-b028e578e791?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  src:"../assets/almt.png"
 };
 
 const goldSponsors = [
-  { name: "Hindustan Hydraulics", src: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Bachan CNC",           src: "https://images.unsplash.com/photo-1671040690726-b78261eff126?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Hindustan Hydraulics", src: "../assets/Ufit.png" },
+  { name: "Bachan CNC",           src: "../assets/bachan Laser.png" },
 ];
 
 /* Row 1 — slides LEFT (top marquee) */
