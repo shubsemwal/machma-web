@@ -3,9 +3,6 @@
 ───────────────────────────────────────────── */
 
 /* ── Google Font ── */
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap");
-
-/* ── CSS Variables ── */
 :root {
   --red: #c8151b;
   --red-dark: #8b0000;
@@ -23,10 +20,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Barlow", sans-serif;
 }
 
 /* ══════════════════════════════

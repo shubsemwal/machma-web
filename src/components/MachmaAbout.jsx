@@ -76,118 +76,45 @@ export default function MachmaAbout({ exhibitionPhoto = null }) {
       <div className="ma-inner">
 
         {/* ══ LEFT – Punjab Map ══ */}
-        <div className="ma-map-col">
-          <div className="ma-map-wrap">
+      <div className="india-map-wrapper">
+      <svg
+        viewBox="0 0 600 700"
+        className="india-svg"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* INDIA OUTLINE (more realistic shape) */}
+        <path
+          className="india-path"
+          d="
+          M300 40 
+          L360 60 L410 100 L450 150 L480 210 
+          L500 280 L490 350 L460 420 L420 480 
+          L380 530 L330 580 L280 610 L230 630 
+          L190 610 L150 570 L120 520 L100 470 
+          L90 410 L100 350 L130 290 L160 240 
+          L190 200 L220 150 L250 100 Z
+          "
+        />
 
-            {/* Pulse ring around Ludhiana dot */}
-            <div className="ma-pulse-ring" />
+        {/* PUNJAB REGION (approx area highlight) */}
+        <ellipse
+          cx="240"
+          cy="140"
+          rx="30"
+          ry="20"
+          className="punjab-highlight"
+        />
 
-            <svg
-              className="ma-punjab-svg"
-              viewBox="0 0 480 420"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* ── Punjab outline (simplified accurate path) ── */}
-              <path
-                className="punjab-outline"
-                d="
-                  M 140 30
-                  L 200 18
-                  L 270 10
-                  L 340 22
-                  L 400 55
-                  L 435 100
-                  L 445 155
-                  L 438 210
-                  L 420 255
-                  L 390 295
-                  L 355 325
-                  L 310 345
-                  L 265 355
-                  L 215 348
-                  L 170 330
-                  L 130 300
-                  L 95 265
-                  L 68 220
-                  L 52 170
-                  L 50 120
-                  L 68 75
-                  L 100 45
-                  Z
-                "
-              />
+        {/* PULSE DOT */}
+        <circle cx="240" cy="140" r="6" className="punjab-dot" />
+        <circle cx="240" cy="140" r="14" className="pulse-ring" />
 
-              {/* Dot-grid texture inside map */}
-              <defs>
-                <pattern id="dotGrid" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1.2" fill="rgba(200,21,27,0.22)" />
-                </pattern>
-                <clipPath id="punjabClip">
-                  <path d="M140 30 L200 18 L270 10 L340 22 L400 55 L435 100 L445 155 L438 210 L420 255 L390 295 L355 325 L310 345 L265 355 L215 348 L170 330 L130 300 L95 265 L68 220 L52 170 L50 120 L68 75 L100 45 Z" />
-                </clipPath>
-                <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="rgba(200,21,27,0.08)" />
-                  <stop offset="100%" stopColor="rgba(200,21,27,0)" />
-                </radialGradient>
-              </defs>
-
-              {/* Dot fill */}
-              <rect
-                width="480" height="420"
-                fill="url(#dotGrid)"
-                clipPath="url(#punjabClip)"
-              />
-              {/* Glow fill */}
-              <ellipse cx="245" cy="195" rx="200" ry="180"
-                fill="url(#mapGlow)"
-                clipPath="url(#punjabClip)"
-              />
-
-              {/* Radiating lines from Ludhiana (247, 185) */}
-              {rays.map((r, i) => (
-                <line
-                  key={i}
-                  className="map-ray"
-                  x1="247" y1="185"
-                  x2={r.x2} y2={r.y2}
-                  style={{ animationDelay: `${i * 0.12}s` }}
-                />
-              ))}
-
-              {/* Ludhiana dot */}
-              <circle cx="247" cy="185" r="8" fill="#c8151b" opacity="0.25" />
-              <circle cx="247" cy="185" r="5" fill="#c8151b" opacity="0.55" />
-              <circle cx="247" cy="185" r="3" fill="#c8151b" />
-
-              {/* Ludhiana label */}
-              <rect x="256" y="172" width="88" height="22" rx="4" fill="#1a0505" />
-              <text x="300" y="187" textAnchor="middle" fontSize="11" fontWeight="700"
-                fontFamily="'Barlow Condensed', sans-serif" fill="white" letterSpacing="1">
-                LUDHIANA
-              </text>
-
-              {/* Other city dots */}
-              {[
-                { x: 310, y: 80,  name: "Amritsar"  },
-                { x: 380, y: 145, name: "Jalandhar" },
-                { x: 155, y: 260, name: "Patiala"   },
-                { x: 340, y: 295, name: "Bathinda"  },
-              ].map((city) => (
-                <g key={city.name}>
-                  <circle cx={city.x} cy={city.y} r="3.5" fill="#1a0505" opacity="0.5" />
-                  <text x={city.x + 8} y={city.y + 4} fontSize="9" fill="#555"
-                    fontFamily="'Barlow', sans-serif" fontWeight="500">
-                    {city.name}
-                  </text>
-                </g>
-              ))}
-            </svg>
-
-            {/* PUNJAB label */}
-            <div className="ma-map-label">PUNJAB</div>
-          </div>
-        </div>
+        {/* LABEL */}
+        <text x="275" y="145" className="punjab-text">
+          Punjab
+        </text>
+      </svg>
+    </div>
 
         {/* ══ RIGHT – Content ══ */}
         <div className="ma-content-col">

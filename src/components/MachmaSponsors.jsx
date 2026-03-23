@@ -1,44 +1,53 @@
 import "./MachmaSponsors.css";
+import almtImg from "../assets/Almti.png";
+import ufitImg from "../assets/Ufit.png";
+import bachanImg from "../assets/bachan-laser.png";
+import chamberImg from "../assets/chamber-of-chandigarh.png";
+import ficoImg from "../assets/fico.png";
+import globalImg from "../assets/global.png";
+import jaewooImg from "../assets/jaewoo.png";
+import kwalityImg from "../assets/kwality.png";
+import laghuImg from "../assets/laghu-udhyog.png";
+import medeaImg from "../assets/medea-partner.png";
 
 /* ── Sponsor data — replace src with real logo paths ── */
 const poweredBy = {
   name: "ALMTI",
   label: "Association of Ludhiana Machine Tool Industries",
-  src:"../assets/almt.png"
+  src:almtImg
 };
 
 const goldSponsors = [
-  { name: "Hindustan Hydraulics", src: "../assets/Ufit.png" },
-  { name: "Bachan CNC",           src: "../assets/bachan Laser.png" },
+  { name: "Hindustan Hydraulics", src:ufitImg 
+  },
+  { name: "Bachan CNC",           src: bachanImg },
 ];
 
 /* Row 1 — slides LEFT (top marquee) */
 const silverRow1 = [
-  { name: "Jyoti",           src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "NTAT Technologies",src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Guru Kirpa Automation", src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "KAMCO",           src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Infused Systems",  src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Bhavya Machines",  src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Jyoti",           src: globalImg },
+  { name: "NTAT Technologies",src: medeaImg },
+  { name: "Guru Kirpa Automation", src: kwalityImg },
+  { name: "Infused Systems",  src: laghuImg },
+  { name: "Bhavya Machines",  src: chamberImg },
 ];
 
 /* Row 2 — slides RIGHT (bottom marquee) */
 const silverRow2 = [
-  { name: "KG Electronics",   src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Jaewoo Machines",  src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Angel India",      src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Chamber of Chandigarh Industries", src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "FICO",             src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "UFit",             src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Jyoti",           src: globalImg },
+  { name: "NTAT Technologies",src: medeaImg },
+  { name: "Guru Kirpa Automation", src: kwalityImg },
+  { name: "Infused Systems",  src: laghuImg },
+  { name: "Bhavya Machines",  src: chamberImg },
 ];
 
 const partners = [
-  { tier: "Technology Partner", name: "BST TEC",  src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGlnaXRhbCUyMHRvb2xzfGVufDB8fDB8fHww" },
-  { tier: "Banking Partner",    name: "SIDBI",     src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { tier: "Supported By",       name: "Laghu Udyog Sangha", src: "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { tier: "Technology Partner", name: "BST TEC",  src: "://images..com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGlnaXRhbCUyMHRvb2xzfGVufDB8fDB8fHww" },
+  { tier: "Banking Partner",    name: "SIDBI",     src: ":" },
+  { tier: "Supported By",       name: "Laghu Udyog Sangha", src: ":" },
 ];
 
-/* ── Placeholder logo block (used when src is "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ── */
+/* ── Placeholder logo block (used when src is ":") ── */
 function LogoBlock({ name, size = "md" }) {
   const initials = name
     .split(" ")

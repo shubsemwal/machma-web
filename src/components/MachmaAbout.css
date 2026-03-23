@@ -1,8 +1,3 @@
-/* ─────────────────────────────────────────────
-   MachmaAbout.css  — red / black / white theme
-───────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600;700&display=swap");
-
 /* ── Variables ── */
 :root {
   --red:       #c8151b;
@@ -77,6 +72,73 @@
 /* ══════════════════════════════
    LEFT — MAP
 ══════════════════════════════ */
+
+.india-map-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #f5f2ef;
+}
+
+/* SVG */
+.india-svg {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* India shape */
+.india-path {
+  fill: #f3eeee;
+  stroke: #c8151b;
+  stroke-width: 2;
+  transition: 0.3s;
+}
+
+.india-path:hover {
+  fill: #ffe5e5;
+}
+
+/* Punjab highlight area */
+.punjab-highlight {
+  fill: rgba(200, 21, 27, 0.25);
+}
+
+/* Dot */
+.punjab-dot {
+  fill: #c8151b;
+}
+
+/* Pulse animation */
+.pulse-ring {
+  fill: rgba(200, 21, 27, 0.3);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    r: 8;
+    opacity: 0.6;
+  }
+  70% {
+    r: 28;
+    opacity: 0;
+  }
+  100% {
+    r: 8;
+    opacity: 0;
+  }
+}
+
+/* Label */
+.punjab-text {
+  font-size: 13px;
+  font-weight: 700;
+  fill: #1a0505;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 .ma-map-col {
   position: sticky;
   top: 100px;

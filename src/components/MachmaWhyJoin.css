@@ -1,9 +1,3 @@
-/* ─────────────────────────────────────────────
-   MachmaWhyJoin.css
-   Theme: Red · Black · White  +  Tool Watermarks
-───────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,900&family=Barlow:wght@400;500;600;700&display=swap");
-
 :root {
   --wj-red:       #c8151b;
   --wj-red-dark:  #8b0000;

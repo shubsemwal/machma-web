@@ -1,11 +1,3 @@
-/* ═══════════════════════════════════════════════════════════════
-   MachmaInvitation.css  —  PREMIUM ENHANCED VERSION
-   Envelope open animation · Luxury red/white/black palette
-   Smooth card rise · Staggered content reveals · Full responsive
-═══════════════════════════════════════════════════════════════ */
-
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap");
-
 /* ─── CSS VARIABLES ─────────────────────────────────────────── */
 :root {
   --inv-red:          #c8151b;
