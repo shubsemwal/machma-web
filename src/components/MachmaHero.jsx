@@ -43,15 +43,15 @@ export default function MachmaHero({
   useEffect(() => {
     const el = heroRef.current;
     if (!el) return;
-    el.classList.add("hero--visible");
+    el.classNameList.add("hero--visible");
   }, []);
 
   return (
-<section class="machma-hero">
+<section className="machma-hero">
   <img 
     src={heroImage} 
     alt="MachmaHero banner"
-    class="hero-img"
+    className="hero-img"
   />
 </section>
   );
