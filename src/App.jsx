@@ -13,12 +13,14 @@ import MachmaInvitation from './components/MachmaInvitation'
 import MachmaSponsors from './components/MachmaSponsors'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from "./components/Navbar";
+import BookNow from "./components/BookNow";
 
 function App() {
   return (
     <>
      <Navbar />
     <Routes>
+      <Route path="/book-now" element={<BookNow />} />
      <Route path="/" element={
     <>
       <MachmaHero />

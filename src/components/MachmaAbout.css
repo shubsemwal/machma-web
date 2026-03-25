@@ -1,18 +1,22 @@
+/* ══════════════════════════════════════════════
+   MachmaAbout.css  —  full file
+   Includes all section, map, and card styles.
+══════════════════════════════════════════════ */
+
 /* ── Variables ── */
 :root {
-  --red:       #c8151b;
-  --red-dark:  #8b0000;
-  --red-mid:   #a01015;
-  --black:     #0f0505;
-  --near-black:#1a0505;
-  --white:     #ffffff;
-  --off-white: #faf7f4;
-  --grey-lt:   #f0ebe5;
-  --grey-mid:  #d4ccc5;
-  --grey-text: #5a5050;
+  --red:        #c8151b;
+  --red-dark:   #8b0000;
+  --red-mid:    #a01015;
+  --black:      #0f0505;
+  --near-black: #1a0505;
+  --white:      #ffffff;
+  --off-white:  #faf7f4;
+  --grey-lt:    #f0ebe5;
+  --grey-mid:   #d4ccc5;
+  --grey-text:  #5a5050;
 }
 
-/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ══════════════════════════════
@@ -24,10 +28,6 @@
   overflow: hidden;
   padding: 80px 0 90px;
   font-family: "Barlow", sans-serif;
-}
-
-/* Entry: section fades + slides in */
-.ma-section {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
@@ -37,7 +37,6 @@
   transform: translateY(0);
 }
 
-/* ── Background decoration ── */
 .ma-bg-stripe {
   position: absolute;
   width: 100%;
@@ -50,8 +49,7 @@
 .ma-bg-dots {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle, rgba(200,21,27,0.07) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(200,21,27,0.07) 1px, transparent 1px);
   background-size: 28px 28px;
   pointer-events: none;
 }
@@ -70,162 +68,180 @@
 }
 
 /* ══════════════════════════════
-   LEFT — MAP
+   LEFT — MAP COLUMN
 ══════════════════════════════ */
-
-.india-map-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  background: #f5f2ef;
-}
-
-/* SVG */
-.india-svg {
-  width: 100%;
-  max-width: 420px;
-}
-
-/* India shape */
-.india-path {
-  fill: #f3eeee;
-  stroke: #c8151b;
-  stroke-width: 2;
-  transition: 0.3s;
-}
-
-.india-path:hover {
-  fill: #ffe5e5;
-}
-
-/* Punjab highlight area */
-.punjab-highlight {
-  fill: rgba(200, 21, 27, 0.25);
-}
-
-/* Dot */
-.punjab-dot {
-  fill: #c8151b;
-}
-
-/* Pulse animation */
-.pulse-ring {
-  fill: rgba(200, 21, 27, 0.3);
-  animation: pulse 1.8s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    r: 8;
-    opacity: 0.6;
-  }
-  70% {
-    r: 28;
-    opacity: 0;
-  }
-  100% {
-    r: 8;
-    opacity: 0;
-  }
-}
-
-/* Label */
-.punjab-text {
-  font-size: 13px;
-  font-weight: 700;
-  fill: #1a0505;
-  font-family: 'Montserrat', sans-serif;
-}
-
-
 .ma-map-col {
   position: sticky;
-  top: 100px;
+  top: 80px;
 }
 
-.ma-map-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Pulse ring behind dot */
-.ma-pulse-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  margin: -30px 0 0 -30px;
-  border-radius: 50%;
-  border: 2px solid var(--red);
-  opacity: 0;
-  animation: pulse-out 2.5s ease-out infinite;
-}
-
-@keyframes pulse-out {
-  0%   { transform: scale(0.4); opacity: 0.7; }
-  100% { transform: scale(3.5); opacity: 0; }
-}
-
-/* Punjab SVG */
-.ma-punjab-svg {
+.india-map-wrapper {
   width: 100%;
-  max-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 0;
+}
+
+/* ── SVG itself ── */
+.india-svg {
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  filter: drop-shadow(0 8px 32px rgba(200,21,27,0.18));
-}
-
-.punjab-outline {
-  fill: none;
-  stroke: var(--red);
-  stroke-width: 2.5;
-  stroke-linejoin: round;
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  animation: draw-outline 2s ease forwards 0.4s;
-}
-
-@keyframes draw-outline {
-  to { stroke-dashoffset: 0; }
-}
-
-/* Radiating lines */
-.map-ray {
-  stroke: var(--red);
-  stroke-width: 1;
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  opacity: 0.45;
-  animation: draw-ray 0.6s ease forwards;
-  animation-delay: 2s; /* after outline draws */
-}
-
-@keyframes draw-ray {
-  to { stroke-dashoffset: 0; }
-}
-
-/* PUNJAB label under map */
-.ma-map-label {
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 900;
-  font-size: 2.2rem;
-  letter-spacing: 0.35em;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(200,21,27,0.25);
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0 8px 28px rgba(200,21,27,0.12));
 }
 
 /* ══════════════════════════════
-   RIGHT — CONTENT
+   ALL STATE PATHS
+══════════════════════════════ */
+.st {
+  fill: #a8a6a6;
+  stroke: #ffffff;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.st.isl {
+  stroke-width: 0.7;
+}
+
+.st.sl {
+  fill: #bfbcbc;
+  stroke: #d8d4d4;
+}
+
+/* ══════════════════════════════
+   PUNJAB — red
+══════════════════════════════ */
+.st--punjab {
+  fill: var(--red);
+  stroke: #ffffff;
+  stroke-width: 1.2;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation:
+    draw-punjab 0.7s ease forwards 0.3s,
+    punjab-breathe 3s ease-in-out infinite 1.2s;
+}
+
+@keyframes draw-punjab {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes punjab-breathe {
+  0%, 100% { fill: var(--red); }
+  50%       { fill: #e0191f; }
+}
+
+/* ══════════════════════════════
+   PULSE RINGS
+══════════════════════════════ */
+.pulse {
+  fill: none;
+  stroke: var(--red);
+  opacity: 0;
+}
+.pulse--1 { animation: pulse-expand 2.2s ease-out infinite 1.2s; }
+.pulse--2 { animation: pulse-expand 2.2s ease-out infinite 1.9s; }
+.pulse--3 { animation: pulse-expand 2.2s ease-out infinite 2.6s; }
+
+@keyframes pulse-expand {
+  0%   { r: 5;  stroke-width: 2;   opacity: 0.9; }
+  60%  { r: 18; stroke-width: 1;   opacity: 0.25; }
+  100% { r: 28; stroke-width: 0.3; opacity: 0;   }
+}
+
+/* ══════════════════════════════
+   LOCATION DOT
+══════════════════════════════ */
+.dot-halo {
+  fill: rgba(200,21,27,0.18);
+  opacity: 0;
+  animation: fadein 0.4s ease forwards 1s;
+}
+.dot-red {
+  fill: var(--red);
+  stroke: #fff;
+  stroke-width: 1.5;
+  opacity: 0;
+  animation: fadein 0.4s ease forwards 1s;
+}
+.dot-white {
+  fill: #fff;
+  opacity: 0;
+  animation: fadein 0.4s ease forwards 1.1s;
+}
+
+/* ══════════════════════════════
+   LEADER LINE + LABELS
+══════════════════════════════ */
+.leader {
+  stroke: var(--red);
+  stroke-width: 0.8;
+  stroke-dasharray: 3 2;
+  opacity: 0;
+  animation: fadein 0.4s ease forwards 1.2s;
+}
+.leader-dot {
+  fill: var(--red);
+  opacity: 0;
+  animation: fadein 0.4s ease forwards 1.2s;
+}
+.lbl-main {
+  font-family: "Barlow Condensed", "Barlow", sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  fill: var(--red);
+  opacity: 0;
+  animation: fadein 0.4s ease forwards 1.3s;
+}
+.lbl-city {
+  font-family: "Barlow Condensed", "Barlow", sans-serif;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  fill: var(--near-black);
+  opacity: 0;
+  animation: fadein 0.4s ease forwards 1.5s;
+}
+
+/* ══════════════════════════════
+   STATE NAME LABELS
+══════════════════════════════ */
+/* Punjab red label inside state */
+.plbl {
+  font-family: "Barlow Condensed", "Barlow", sans-serif;
+  font-size: 6.5px;
+  font-weight: 800;
+  fill: #fff;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: fadein 0.5s ease forwards 1s;
+}
+
+/* All other state white labels */
+.slbl {
+  font-family: "Barlow Condensed", "Barlow", sans-serif;
+  font-size: 5.5px;
+  font-weight: 600;
+  fill: #ffffff;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+
+@keyframes fadein {
+  to { opacity: 1; }
+}
+
+/* ══════════════════════════════
+   RIGHT — CONTENT COLUMN
 ══════════════════════════════ */
 .ma-content-col {
   display: flex;
@@ -252,7 +268,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .ma-heading {
   font-family: "Barlow Condensed", sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -260,17 +275,14 @@
   color: var(--near-black);
   line-height: 1.15;
 }
-
 .ma-heading em {
   font-style: normal;
   color: var(--red);
 }
-
 .ma-heading--accent {
   color: var(--red);
   font-style: italic;
 }
-
 .ma-heading-line {
   width: 60px;
   height: 4px;
@@ -279,19 +291,17 @@
   border-radius: 2px;
 }
 
-/* ── Description two-col grid ── */
+/* ── Description ── */
 .ma-desc-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
-
 .ma-desc {
   font-size: 0.93rem;
   line-height: 1.75;
   color: var(--grey-text);
 }
-
 .ma-desc strong {
   color: var(--near-black);
   font-weight: 700;
@@ -301,11 +311,9 @@
 .ma-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
   gap: 12px;
 }
 
-/* Card base */
 .ma-stat-card {
   position: relative;
   overflow: hidden;
@@ -314,43 +322,33 @@
   border-radius: 8px;
   padding: 22px 18px 18px;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-
-  /* entry animation */
   opacity: 0;
   transform: translateY(16px);
   animation: card-in 0.5s ease forwards;
 }
-
 .ma-section--visible .ma-stat-card {
   animation: card-in 0.5s ease forwards;
 }
-
 @keyframes card-in {
   to { opacity: 1; transform: translateY(0); }
 }
-
 .ma-stat-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(200,21,27,0.15);
   border-color: var(--red);
 }
 
-/* Red highlight card */
 .ma-stat-card--red {
   background: var(--red);
   border-color: var(--red-dark);
   color: var(--white);
 }
-
 .ma-stat-card--red:hover {
   box-shadow: 0 12px 32px rgba(139,0,0,0.35);
   border-color: var(--red-dark);
 }
 
-/* Photo card */
-.ma-stat-card--photo {
-  grid-column: span 1;
-}
+.ma-stat-card--photo { grid-column: span 1; }
 
 .ma-stat-bg-photo {
   position: absolute;
@@ -363,7 +361,6 @@
   pointer-events: none;
 }
 
-/* Diagonal accent on top-left corner */
 .ma-stat-card::before {
   content: "";
   position: absolute;
@@ -374,16 +371,13 @@
   border-color: var(--red) transparent transparent transparent;
   transition: border-width 0.2s;
 }
-
 .ma-stat-card--red::before {
   border-color: rgba(255,255,255,0.25) transparent transparent transparent;
 }
-
 .ma-stat-card:hover::before {
   border-width: 28px 28px 0 0;
 }
 
-/* Stat inner */
 .ma-stat-inner {
   position: relative;
   z-index: 1;
@@ -391,7 +385,6 @@
   flex-direction: column;
   gap: 3px;
 }
-
 .ma-stat-value {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 900;
@@ -400,10 +393,7 @@
   line-height: 1;
   display: block;
 }
-
-.ma-stat-card--red .ma-stat-value {
-  color: var(--white);
-}
+.ma-stat-card--red .ma-stat-value { color: var(--white); }
 
 .ma-stat-label {
   font-family: "Barlow Condensed", sans-serif;
@@ -414,10 +404,7 @@
   color: var(--near-black);
   display: block;
 }
-
-.ma-stat-card--red .ma-stat-label {
-  color: rgba(255,255,255,0.85);
-}
+.ma-stat-card--red .ma-stat-label { color: rgba(255,255,255,0.85); }
 
 .ma-stat-sub {
   font-size: 0.77rem;
@@ -425,81 +412,42 @@
   line-height: 1.4;
   margin-top: 6px;
 }
-
-.ma-stat-card--red .ma-stat-sub {
-  color: rgba(255,255,255,0.75);
-}
-
-/* First card (13th) spans full column height visually */
-.ma-stats-grid > .ma-stat-card:first-child {
-  grid-row: span 1;
-}
+.ma-stat-card--red .ma-stat-sub { color: rgba(255,255,255,0.75); }
 
 /* ══════════════════════════════
    RESPONSIVE
 ══════════════════════════════ */
-
-/* Large laptop */
 @media (max-width: 1100px) {
   .ma-inner {
     grid-template-columns: 340px 1fr;
     gap: 2.5rem;
     padding: 0 2rem;
   }
+  .india-svg { max-width: 340px; }
 }
 
-/* Tablet */
 @media (max-width: 860px) {
   .ma-inner {
     grid-template-columns: 1fr;
     padding: 0 1.5rem;
   }
-
   .ma-map-col {
     position: static;
     display: flex;
     justify-content: center;
   }
-
-  .ma-punjab-svg {
-    max-width: 280px;
-  }
-
-  .ma-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .ma-desc-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  .india-svg { max-width: 280px; }
+  .ma-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .ma-desc-grid { grid-template-columns: 1fr; gap: 1rem; }
 }
 
-/* Mobile */
 @media (max-width: 520px) {
-  .ma-section {
-    padding: 60px 0 70px;
-  }
-
-  .ma-inner {
-    padding: 0 1rem;
-    gap: 2rem;
-  }
-
-  .ma-heading {
-    font-size: 1.6rem;
-  }
-
-  .ma-stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .ma-punjab-svg {
-    max-width: 220px;
-  }
-
-  .ma-map-label {
-    font-size: 1.5rem;
-  }
+  .ma-section { padding: 60px 0 70px; }
+  .ma-inner { padding: 0 1rem; gap: 2rem; }
+  .ma-heading { font-size: 1.6rem; }
+  .ma-stats-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .india-svg { max-width: 220px; }
+  .slbl { font-size: 4.5px; }
+  .lbl-main { font-size: 8px; }
+  .lbl-city { font-size: 6.5px; }
 }

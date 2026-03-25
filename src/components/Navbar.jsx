@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import heroImage from "../assets/machma-expo-2026-main.jpeg";
 
 const navLinks = [
   { label: "HOME", href: "/" },
@@ -18,7 +19,7 @@ export default function Navbar({ logoImage = null }) {
       <Link to="/" className="machma-logo-wrap">
         {logoImage ? (
           <img
-            src={logoImage}
+            src={heroImage}
             alt="MACHMA Expo 2026"
             className="machma-logo-img"
           />
@@ -48,7 +49,7 @@ export default function Navbar({ logoImage = null }) {
         ))}
       </ul>
 
-      <Link to="/" className="machma-book-btn">
+      <Link to="/book-now" className="machma-book-btn">
         BOOK NOW
       </Link>
     </nav>

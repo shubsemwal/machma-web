@@ -157,20 +157,15 @@
    HERO SECTION
 ══════════════════════════════ */
 .machma-hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1.3fr 0.7fr;
-  align-items: center;
-  min-height: 480px;
-  background: linear-gradient(135deg, #f8f4f0 0%, #ece6e0 50%, #e8ddd5 100%);
-  overflow: hidden;
-  padding: 3rem 2rem 3rem 3rem;
-  gap: 1.5rem;
-
-  /* entry animation */
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+ width: 100%;
+  display: block;           /* or grid if you have left/center/right children */
+  background-color: #000
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;   /* or 'cover' if you want it to fill without whitespace */
 }
 
 .machma-hero.hero--visible {
